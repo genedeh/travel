@@ -2,14 +2,14 @@ import Link from "next/link";
 import { FaCalendarCheck } from "react-icons/fa";
 const Navbar = () => {
   return (
-    <nav className="absolute fixed top-0 left-0 z-50 w-full bg-transparent text-white">
-  <div className="flex w-full items-center h-full justify-between px-6 py-4">
+    <nav className=" fixed top-0 left-0 z-50 w-full bg-white text-white">
+  <div className="flex w-full items-center justify-between px-6 py-4">
 
     <div>
       <img
         src="/WTW logo 4 1.png"
         alt="Logo"
-        className="h-full w-full object-contain"
+        className="h-20 w-40"
       />
     </div>
 
