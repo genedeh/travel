@@ -2,7 +2,7 @@ import Link from "next/link";
 import { FaCalendarCheck } from "react-icons/fa";
 const Navbar = () => {
   return (
-    <nav className=" fixed top-0 left-0 z-50 w-full bg-[#E8F1FF] text-white">
+    <nav className=" fixed top-0  left-0 z-50 w-full bg-white text-white">
   <div className="flex w-full items-center justify-between px-6 py-4">
 
     <div>
@@ -14,15 +14,15 @@ const Navbar = () => {
     </div>
 
     <div className="hidden items-center gap-9 font-bold md:flex">
-     <Link
-  href="/"
+     <a
+  href="#"
   className="relative text-gray-300 transition duration-300 hover:text-[#ED7911]
   after:absolute after:-bottom-2 after:left-0 after:h-[2px] after:w-0
   after:bg-[#ED7911] after:transition-all after:duration-300
   hover:after:w-full"
 >
   Home
-</Link>
+</a>
 
       <a
         href="/about"
