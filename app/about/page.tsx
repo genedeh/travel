@@ -1,22 +1,29 @@
-import Navbar from '../about/Navbar';
-import Hero from '../about/Hero';
-import Body from '../about/Body';
-import Body2 from'../about/Body2';
-import Body3 from '../about/Body3'
-import Footer from '../about/Footer'
-import WhyChooseUs from '../about/WhyChooseUs'
+import AboutHero from '../about/AboutHero';
+import AboutMainSection from '../about/AboutMainSection';
+import AboutVisionMission from '../about/AboutVisionMission';
+import AboutHowItWorks from '../about/AboutHowItWorks'
+import AboutWhyChooseWow from '../about/AboutWhyChooseWow'
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'About Us',
+  description:
+    'Learn about WOW The World Logistics, a trusted travel and logistics company helping people plan trips, process documents, and deliver with confidence.',
+  alternates: {
+    canonical: '/about',
+  },
+};
+
 const About = () => {
   return (
     
     <main className="min-h-screen w-full bg-white">
-        <Navbar/>
-        <Hero />
+        <AboutHero />
     
-        <Body/>
-        <Body2/>
-        <Body3/>
-        <WhyChooseUs/>
-        <Footer/>
+        <AboutMainSection/>
+        <AboutVisionMission/>
+        <AboutHowItWorks/>
+        <AboutWhyChooseWow/>
         
 
       

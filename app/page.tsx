@@ -1,22 +1,35 @@
-import Navbar from '../components/Navbar';
-import Hero from '../components/Hero';
-import Services from '../components/Services';
+import HomeHero from '../components/HomeHero';
+import HomeServices from '../components/HomeServices';
 import Why from '../components/Why';
-import How from '../components/How'
-import Testimonials from '../components/Testimonials'
-import FAQ from '../components/FAQ'
-import Footer from '../components/Footer'
+import HomeHowItWorks from '../components/HomeHowItWorks'
+import HomeTopDestinations from '../components/HomeTopDestinations'
+import HomeFeaturedToursLogistics from '../components/HomeFeaturedToursLogistics'
+import HomeLogisticsServices from '../components/HomeLogisticsServices'
+import HomeTestimonials from '../components/HomeTestimonials'
+import HomeFAQ from '../components/HomeFAQ'
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Flights, Tours, Visa Assistance & Logistics',
+  description:
+    'Plan your next trip with WOW The World Logistics. Book flights, hotels, tours, visa assistance, passport processing, and logistics services in one place.',
+  alternates: {
+    canonical: '/',
+  },
+};
+
 export default function Home() {
   return (
     <main  >
-      <Navbar />
-      <Hero />
-      <Services />
+      <HomeHero />
+      <HomeServices />
       <Why />
-      <How />
-      <Testimonials />
-      <FAQ/>
-      <Footer />
+      <HomeHowItWorks />
+      <HomeTopDestinations />
+      <HomeFeaturedToursLogistics />
+      <HomeLogisticsServices />
+      <HomeTestimonials />
+      <HomeFAQ/>
     
     
     </main>

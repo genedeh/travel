@@ -1,58 +1,62 @@
+import Image from "next/image";
+
+const features = [
+  "Professional and customer-focused service",
+  "Fast, reliable and transparent processes",
+  "Affordable travel solutions",
+  "Personalized support from start to finish",
+  "Reliable assistance before, during and after your trip",
+  "Commitment to honesty, integrity and satisfaction",
+];
 
 const Why = () => {
-  const features = [
-    "Professional and customer-focused service",
-    "Fast, reliable and transparent processes",
-    "Affordable travel solutions",
-    "Personalized support from start to finish",
-    "Reliable assistance before, during and after your trip",
-    "Commitment to honesty, integrity and satisfaction",
-  ];
- 
-
   return (
-    <section className="w-full bg-white px-6 py-20 md:px-10 lg:px-16">
-      <div className="mx-auto flex max-w-[1350px] items-center gap-12 lg:gap-16">
-        <div className="relative h-[360px] w-[360px] shrink-0">
-          <div className="absolute inset-0 translate-y-3 rounded-full bg-blue-600" />
-
-          <div className="relative h-full w-full overflow-hidden rounded-full">
-            <img
-              src="/ChatGPT Image Aug 3, 2026, 12_56_39 PM 1 (1).png"
-              alt="Travel"
-              className="h-full w-full object-cover"
-            />
-          </div>
+    <section className="w-full bg-white px-4 py-10 sm:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-[1080px] flex-col items-center gap-[54px] lg:flex-row lg:items-start">
+        <div className="relative isolate h-[298px] w-[313px] shrink-0">
+          <div className="absolute left-[32px] bottom-6 z-0 h-[166px] w-[249px] rounded-b-full bg-[#0363F1]" />
+          <Image
+            src="/why-choose-wow-img1.png"
+            alt="Traveler ready for an international trip"
+            width={313}
+            height={263}
+            className="absolute left-0 top-0 z-10 h-auto w-[313px]"
+          />
         </div>
 
-        <div className="relative min-h-[390px] flex-1 overflow-hidden">
-          <img
-            src="/Traveler rushing to gate with departing airplane, Missing flight and airport rush.png"
+        <div className="relative w-full max-w-[712px] overflow-hidden py-1">
+          <Image
+            src="/why-choose-wow-img2.png"
             alt=""
-            className="absolute inset-0 h-full w-full object-cover"
+            width={380}
+            height={260}
+            className="pointer-events-none absolute left-1/2 top-[24px] z-0 h-auto w-[380px] -translate-x-1/2 opacity-20"
           />
 
-          <div className="relative z-10 px-8 py-5 lg:px-10">
-            <p className="mb-2 text-sm font-bold uppercase tracking-wider text-blue-600">
-              WHY CHOOSE WOW?
-            </p>
+          <div className="relative z-10 flex flex-col gap-[30px]">
+            <div className="flex flex-col gap-[10px]">
+              <div className="flex w-full flex-col gap-[10px] [font-family:Inter,sans-serif] font-semibold lg:w-[320px]">
+                <p className="text-[11px] leading-none text-[#0363F1]">
+                  WHY CHOOSE WOW?
+                </p>
+                <h2 className="text-[20px] font-semibold leading-[25px] text-black">
+                  Your Journey is Our{" "}
+                  <span className="text-[#0363F1]">Priority</span>
+                </h2>
+              </div>
+              <p className="[font-family:Inter,sans-serif] text-[13px] font-normal leading-[22px] text-[#050505B2]">
+                We go above and beyond to deliver exceptional service and make
+                your travel experience seamless and memorable.
+              </p>
+            </div>
 
-            <h2 className="mb-2 text-4xl font-bold text-blue-600">
-             <span className="mb-2 text-4xl font-bold text-black">Your Journey Is Our</span> Priority
-            </h2>
-
-            <p className="mb-8 max-w-2xl  text-xl leading-6 text-gray-700">
-              We go above and beyond to deliver exceptional service and make
-              your travel experience seamless and memorable.
-            </p>
-
-            <div className="grid grid-cols-2 gap-3">
-              {features.map((feature, index) => (
+            <div className="grid w-full max-w-[642px] grid-cols-1 gap-x-[60px] gap-y-[15px] sm:grid-cols-2">
+              {features.map((feature) => (
                 <div
-                  key={index}
-                  className="flex min-h-[65px] items-center rounded-lg border-2 border-gray-800 bg-[#e5f0ff] px-4 py-3"
+                  key={feature}
+                  className="flex min-h-[35px] items-center rounded-[7px] border border-[#8FBFFA4D] bg-[#E0EEFF] px-[18px] py-[9px] shadow-[0_0_4.5px_rgba(0,0,0,0.17)]"
                 >
-                  <p className="text-[15px] leading-5 text-gray-700">
+                  <p className="[font-family:Inter,sans-serif] text-[12px] font-medium leading-normal text-[#000000B2]">
                     {feature}
                   </p>
                 </div>
@@ -61,9 +65,7 @@ const Why = () => {
           </div>
         </div>
       </div>
-     
     </section>
-    
   );
 };
 

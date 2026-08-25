@@ -1,15 +1,22 @@
-import Navbar from '../logistics/Navbar'
 import Hero from '../logistics/Hero'
 import Body from '../logistics/Body'
-import Footer from './Footer';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Logistics Services',
+  description:
+    'Send parcels, documents, and business shipments with WOW The World Logistics. Reliable local, nationwide, and international delivery support.',
+  alternates: {
+    canonical: '/logistics',
+  },
+};
+
 const Logistics = () => {
 
     return(
         <main>
-            <Navbar/>
             <Hero/>
             <Body/>
-            <Footer/>
         
         </main>
 

@@ -1,82 +1,57 @@
-import React from "react";
 import Image from "next/image";
+import Link from "next/link";
+
+const SendPackageIcon = () => (
+  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <mask id="send-package-mask" style={{ maskType: "luminance" }} maskUnits="userSpaceOnUse" x="0" y="0" width="15" height="15">
+      <path d="M7.0835 13.3333C10.5354 13.3333 13.3335 10.5352 13.3335 7.08331C13.3335 3.63144 10.5354 0.833313 7.0835 0.833313C3.63162 0.833313 0.833496 3.63144 0.833496 7.08331C0.833496 10.5352 3.63162 13.3333 7.0835 13.3333Z" fill="white" stroke="white" strokeWidth="1.66667" strokeLinejoin="round" />
+      <path d="M6.146 9.89581L8.9585 7.08331L6.146 4.27081" stroke="black" strokeWidth="1.66667" strokeLinecap="round" strokeLinejoin="round" />
+    </mask>
+    <g mask="url(#send-package-mask)">
+      <path d="M-0.416504 -0.416687H14.5835V14.5833H-0.416504V-0.416687Z" fill="white" />
+    </g>
+  </svg>
+);
 
 const Hero = () => {
   return (
-    <section className="relative min-h-[750px] w-full overflow-hidden pt-[80px]">
+    <section className="relative h-[448px] w-full overflow-hidden">
       <Image
         src="/logistic (6).png"
-        alt="Logistics"
+        alt="WOW logistics van delivery"
         fill
         className="object-cover"
         priority
       />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#061947] via-[#061947]/80 to-transparent" />
 
-      <div className="relative z-10 flex min-h-[670px] w-full flex-col justify-center px-6 sm:px-10 lg:px-14">
-        <p className="mb-6 text-base font-bold text-blue-600 sm:text-lg md:text-xl">
-          OUR LOGISTICS SERVICES
+      <div className="relative z-10 flex h-full max-w-[520px] flex-col justify-center px-6 sm:px-10">
+        <p className="font-inter text-[13px] font-semibold uppercase leading-none text-[#0363F1]">
+          Our Logistics Services
         </p>
 
-        <h1 className="max-w-[650px] text-4xl font-bold leading-tight text-white sm:text-5xl md:text-6xl">
-          <span className="block">Fast. Secure. Reliable.</span>
-          <span className="mt-3 block">Delivered with Care.</span>
+        <h1 className="mt-[28px] font-inter text-[32px] font-bold leading-[50px] text-white">
+          Fast. Secure. Reliable.
+          <br />
+          Delivered with Care.
         </h1>
 
-        <p className="mt-7 w-full max-w-[560px] text-base leading-relaxed text-white sm:text-lg md:text-xl">
+        <p className="mt-[20px] font-inter text-[15px] font-medium leading-[25px] text-white">
           At WOW The World Logistics, we provide dependable logistics solutions
           for individuals and businesses, from parcels to documents and bulk
           shipments, we ensure your items reach their destination safely and on
           time.
         </p>
 
-        <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:gap-4">
-          <button className="w-fit rounded-xl bg-blue-500 px-6 py-3 text-base font-bold text-white sm:px-7 sm:text-lg md:text-xl hover:bg-blue-600 transition-colors">
+        <div className="mt-[20px] flex flex-wrap gap-[20px]">
+          <Link href="/contact" className="inline-flex h-[34px] items-center justify-center gap-[5px] rounded-[5px] bg-[#0363F1] px-[18px] font-inter text-[13px] font-medium text-white transition hover:bg-[#024dbb]">
             Send a Package
-          </button>
-
-          <button className="w-fit rounded-xl border border-blue-500 bg-white px-6 py-3 text-base font-bold text-blue-500 sm:px-7 sm:text-lg md:text-xl hover:bg-gray-50 transition-colors">
+            <SendPackageIcon />
+          </Link>
+          <Link href="/contact" className="inline-flex h-[34px] items-center justify-center rounded-[5px] border border-[#0363F1] bg-white px-[18px] font-inter text-[13px] font-medium text-[#0363F1] transition hover:bg-[#E0EEFF]">
             Request a Quote
-          </button>
+          </Link>
         </div>
-      </div>
-
-      <div className="absolute mr-20 bottom-0 right-0 z-20 w-full max-w-[520px] rounded-t-3xl bg-[#F4F6F9] p-6 sm:p-8 shadow-2xl">
-        <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-5">
-          Track Your Shipment
-        </h2>
-
-        <div className="flex items-center gap-3">
-          <input
-            type="text"
-            placeholder="Enter Tracking Number"
-            className="w-full rounded-xl border border-gray-200 bg-white px-4 py-3.5 text-gray-700 placeholder-gray-400 outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all text-sm sm:text-base"
-          />
-
-          <button className="whitespace-nowrap rounded-xl bg-[#0066FF] px-6 py-3.5 text-sm sm:text-base font-semibold text-white hover:bg-blue-700 transition-colors shadow-sm">
-            Track Now
-          </button>
-        </div>
-
-        <a
-          href="#"
-          className="mt-4 inline-flex items-center gap-2 text-xs sm:text-sm font-medium text-[#0066FF] hover:underline"
-        >
-          <svg
-            className="w-4 h-4"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-          >
-            <circle cx="12" cy="12" r="10" />
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M12 16v-4m0-4h.01"
-            />
-          </svg>
-          <span>How to find your tracking number?</span>
-        </a>
       </div>
     </section>
   );
