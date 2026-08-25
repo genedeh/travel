@@ -152,7 +152,7 @@ const Body = () => {
         </h2>
       </div>
 
-      <div className="mx-auto grid w-full max-w-[1120px] grid-cols-1 justify-items-center gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto grid w-full max-w-[1120px] grid-cols-1 justify-items-center gap-[20px] sm:grid-cols-2 xl:grid-cols-4">
         {services.map((item, index) => (
           <div
             key={index}
@@ -196,7 +196,7 @@ const Body = () => {
           className="object-cover object-right"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#061947] via-[#06327B]/95 to-[#06327B]/10" />
-        <div className="relative z-10 flex min-h-[177px] max-w-[520px] items-center gap-[24px] px-[37px] py-[26px]">
+        <div className="relative z-10 flex min-h-[177px] max-w-[520px] flex-col items-start gap-[18px] px-5 py-[26px] sm:flex-row sm:items-center sm:gap-[24px] sm:px-[37px]">
           <div className="flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-full border border-white bg-[#0363F1] p-[15px]">
             <HelpIcon />
           </div>

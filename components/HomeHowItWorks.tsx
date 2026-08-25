@@ -48,7 +48,7 @@ const HomeHowItWorks = () => {
   ];
 
   return (
-    <section className="flex min-h-[249px] w-full flex-col items-center justify-center gap-[10px] bg-[#E0EEFF] px-4 py-5 sm:px-8 lg:px-[208px]">
+    <section className="flex min-h-[249px] w-full flex-col items-center justify-center gap-[10px] bg-[#E0EEFF] px-4 py-5 sm:px-8 xl:px-[208px]">
       <div className="mx-auto w-full max-w-[980px]">
         <div className="text-center">
           <p className="text-[11px] font-semibold uppercase leading-none text-[#0363F1]">
@@ -60,7 +60,7 @@ const HomeHowItWorks = () => {
           </h2>
         </div>
 
-        <div className="mt-6 grid grid-cols-1 gap-8 md:grid-cols-4 md:gap-0">
+        <div className="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4 xl:gap-0">
           {steps.map((step, index) => (
             <div
               key={step.title}
@@ -72,7 +72,7 @@ const HomeHowItWorks = () => {
                 </div>
 
                 {index < steps.length - 1 && (
-                  <div className="absolute left-[calc(50%+42px)] right-[calc(-50%+42px)] top-1/2 hidden -translate-y-1/2 items-center md:flex">
+                  <div className="absolute left-[calc(50%+42px)] right-[calc(-50%+42px)] top-1/2 hidden -translate-y-1/2 items-center xl:flex">
                     <div className="h-0 w-full border-t border-dashed border-[#0A315F]" />
                   </div>
                 )}

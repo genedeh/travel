@@ -78,7 +78,7 @@ const AboutHowItWorks = () => {
           <div className="mx-auto mt-[18px] h-[4px] w-[50px] rounded-full bg-[#0363F1]" />
         </div>
 
-        <div className="mt-[48px] grid grid-cols-1 gap-x-[38px] gap-y-8 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="mt-[48px] grid grid-cols-1 gap-x-[38px] gap-y-8 sm:grid-cols-2 xl:grid-cols-5">
           {values.map((value) => (
             <article key={value.title} className="flex items-start gap-[18px]">
               <div className="flex h-[50px] w-[50px] shrink-0 items-center justify-center">
@@ -90,7 +90,7 @@ const AboutHowItWorks = () => {
                   {value.title}
                 </h3>
 
-                <p className="mt-[11px] max-w-[150px] font-inter text-[13px] font-medium leading-none text-black">
+                <p className="mt-[11px] max-w-[220px] font-inter text-[13px] font-medium leading-[16px] text-black xl:max-w-[150px] xl:leading-none">
                   {value.description}
                 </p>
               </div>

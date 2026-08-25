@@ -103,7 +103,7 @@ const HomeServices = () => {
           </p>
         </div>
 
-        <div className="mx-auto mt-9 grid max-w-252.5 grid-cols-1 justify-items-center gap-3.75 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-9 grid max-w-252.5 grid-cols-1 justify-items-center gap-3.75 sm:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
             <article
               key={service.title}

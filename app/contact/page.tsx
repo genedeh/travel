@@ -70,7 +70,7 @@ const ContactPage = () => {
 
   return (
     <main className="w-full bg-white text-black">
-      <section className="relative h-[420px] w-full overflow-hidden">
+      <section className="relative min-h-[420px] w-full overflow-hidden">
         <Image
           src="/contact/contact-hero.png"
           alt="Contact WOW The World Logistics"
@@ -83,7 +83,7 @@ const ContactPage = () => {
           <p className="font-inter text-[13px] font-semibold uppercase leading-none text-[#3A86FF]">
             Contact Us
           </p>
-          <h1 className="mt-[18px] font-inter text-[34px] font-bold leading-[46px] text-white">
+          <h1 className="mt-[18px] font-inter text-[30px] font-bold leading-[40px] text-white sm:text-[34px] sm:leading-[46px]">
             We’re here to help you plan, book, and deliver.
           </h1>
           <p className="mt-[16px] max-w-[500px] font-inter text-[15px] font-medium leading-[25px] text-white/80">
@@ -102,7 +102,7 @@ const ContactPage = () => {
                 href={card.href}
                 target={card.href.startsWith("http") ? "_blank" : undefined}
                 rel={card.href.startsWith("http") ? "noreferrer" : undefined}
-                className="group flex min-h-[76px] items-center gap-[18px] rounded-[8px] bg-white/70 px-[18px] py-[13px] shadow-[0_0_4px_0_#00000012] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_10px_22px_0_#0363F11F]"
+                className="group flex min-h-[76px] items-start gap-[14px] rounded-[8px] bg-white/70 px-[14px] py-[13px] shadow-[0_0_4px_0_#00000012] transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-[0_10px_22px_0_#0363F11F] sm:items-center sm:gap-[18px] sm:px-[18px]"
               >
                 <span className="flex size-[50px] shrink-0 items-center justify-center rounded-full bg-[#0363F1] text-white transition-transform duration-300 group-hover:scale-105">
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

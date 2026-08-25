@@ -60,7 +60,7 @@ const AboutWhyChooseWow = () => {
           </Link>
         </div>
 
-        <div className="grid flex-1 grid-cols-2 gap-y-8 md:grid-cols-4">
+        <div className="grid flex-1 grid-cols-2 gap-y-8 xl:grid-cols-4">
           {stats.map((stat, index) => (
             <div
               key={stat.label}

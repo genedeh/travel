@@ -71,7 +71,7 @@ const AboutMainSection = () => {
             with excellence from start to finish.
           </p>
 
-          <div className="mt-[35px] grid grid-cols-2 gap-y-8 sm:grid-cols-4">
+          <div className="mt-[35px] grid grid-cols-2 gap-y-8 xl:grid-cols-4">
             {keyPoints.map((point, index) => (
               <div
                 key={point.label}

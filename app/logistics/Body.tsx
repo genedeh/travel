@@ -76,7 +76,7 @@ const Body = () => {
           <div className="mt-[15px] h-0 w-[50px] border-t-[4px] border-[#0363F1]" />
         </div>
 
-        <div className="mt-[40px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-[40px] grid grid-cols-1 gap-[20px] sm:grid-cols-2 xl:grid-cols-4">
           {services.map((service) => (
             <article key={service.title} className="group flex min-h-[189px] flex-col items-start rounded-[15px] border border-black/20 bg-white p-[14px] transition-all duration-300 ease-out hover:-translate-y-1 hover:border-[#0363F166] hover:shadow-[0_12px_24px_0_#0000001F]">
               <div className={`flex size-[50px] items-center justify-center rounded-full transition-transform duration-300 group-hover:scale-105 ${service.color}`}>
@@ -92,8 +92,8 @@ const Body = () => {
           ))}
         </div>
 
-        <div className="mt-[58px] grid items-center gap-[38px] lg:grid-cols-[600px_1fr]">
-          <div className="grid gap-[30px] sm:grid-cols-[308px_231px]">
+        <div className="mt-[58px] grid items-center gap-[38px] lg:grid-cols-[minmax(0,600px)_1fr]">
+          <div className="grid gap-[30px] md:grid-cols-[minmax(0,308px)_minmax(0,231px)]">
             <div className="group relative h-[259px] overflow-hidden rounded-[20px]">
               <Image src="/logistic (7).png" alt="Logistics truck shipment" fill sizes="308px" className="object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
             </div>
@@ -134,9 +134,9 @@ const Body = () => {
             <h2 className="font-inter text-[22px] font-semibold leading-[25px] text-white">Need to send a package or document?</h2>
             <p className="mt-[10px] font-inter text-[15px] font-medium leading-[25px] text-white">We’re ready to deliver it for you.</p>
           </div>
-          <div className="flex flex-wrap gap-[20px]">
-            <Link href="/contact" className="flex h-[34px] items-center rounded-[5px] bg-white px-[18px] font-inter text-[13px] font-medium text-[#0363F1] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(255,255,255,0.22)]">Request a Quote</Link>
-            <Link href="/contact" className="inline-flex h-[34px] items-center gap-[8px] rounded-[5px] border border-white/20 bg-[#0363F1] px-[18px] font-inter text-[13px] font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0255cf]">
+          <div className="flex flex-col gap-[14px] sm:flex-row sm:flex-wrap sm:gap-[20px]">
+            <Link href="/contact" className="flex h-[34px] items-center justify-center rounded-[5px] bg-white px-[18px] font-inter text-[13px] font-medium text-[#0363F1] transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_8px_18px_rgba(255,255,255,0.22)]">Request a Quote</Link>
+            <Link href="/contact" className="inline-flex h-[34px] items-center justify-center gap-[8px] rounded-[5px] border border-white/20 bg-[#0363F1] px-[18px] font-inter text-[13px] font-medium text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0255cf]">
               Send a Package
               <SendPackageIcon />
             </Link>

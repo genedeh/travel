@@ -99,12 +99,12 @@ const HomeHero = () => {
       />
       <div className="absolute inset-0 bg-[#001b35]/35" />
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center px-6 pt-24 md:px-10 lg:px-12">
+      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-7xl items-center px-5 pt-24 sm:px-6 md:px-10 lg:px-12">
         <div className="w-full max-w-[560px] translate-y-[10px]">
-          <h1 className="[font-family:Inter,sans-serif] text-[32px] font-bold leading-[50px] text-white">
+          <h1 className="[font-family:Inter,sans-serif] text-[28px] font-bold leading-[42px] text-white sm:text-[32px] sm:leading-[50px]">
             Travel round the World <br />
             with{" "}
-            <span className={`${aladin.className} text-[48px] font-normal leading-[50px] text-[#ED7911]`}>
+            <span className={`${aladin.className} text-[42px] font-normal leading-[42px] text-[#ED7911] sm:text-[48px] sm:leading-[50px]`}>
               Confidence
             </span>
           </h1>
@@ -114,12 +114,12 @@ const HomeHero = () => {
             Logistics - all in one place.
           </p>
 
-          <div className="mt-[17px] flex flex-wrap items-center gap-[14px]">
-            <Link href="/contact" className="flex h-[36px] items-center gap-2 rounded-[5px] bg-[#0363F1] px-[14px] [font-family:Inter,sans-serif] text-[13px] font-medium leading-none text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0255cf] hover:shadow-[0_8px_18px_rgba(3,99,241,0.35)]">
+          <div className="mt-[17px] flex flex-col gap-[12px] sm:flex-row sm:flex-wrap sm:items-center sm:gap-[14px]">
+            <Link href="/contact" className="flex h-[36px] items-center justify-center gap-2 rounded-[5px] bg-[#0363F1] px-[14px] [font-family:Inter,sans-serif] text-[13px] font-medium leading-none text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#0255cf] hover:shadow-[0_8px_18px_rgba(3,99,241,0.35)]">
               Book a Flight
               <PlaneIcon />
             </Link>
-            <Link href="/services" className="flex h-[36px] items-center rounded-[5px] bg-white px-[18px] [font-family:Inter,sans-serif] text-[13px] font-medium leading-none text-[#050505] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F3F8FF] hover:shadow-[0_8px_18px_rgba(255,255,255,0.22)]">
+            <Link href="/services" className="flex h-[36px] items-center justify-center rounded-[5px] bg-white px-[18px] [font-family:Inter,sans-serif] text-[13px] font-medium leading-none text-[#050505] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#F3F8FF] hover:shadow-[0_8px_18px_rgba(255,255,255,0.22)]">
               Explore Services
             </Link>
           </div>

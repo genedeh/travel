@@ -8,7 +8,7 @@ const aladin = Aladin({
 
 const AboutHero = () => {
   return (
-    <section className="relative mt-[88px] h-[478px] w-full overflow-hidden">
+    <section className="relative mt-20 min-h-[478px] w-full overflow-hidden sm:mt-[88px]">
       <Image
         src="/image 18.png"
         alt="Traveler standing at an airport with a plane outside"
@@ -26,12 +26,12 @@ const AboutHero = () => {
             About Us
           </p>
 
-          <h1 className="mt-[24px] font-inter text-[32px] font-bold leading-[50px] text-white">
+          <h1 className="mt-[24px] font-inter text-[28px] font-bold leading-[42px] text-white sm:text-[32px] sm:leading-[50px]">
             Your Journey,
             <br />
             Our{" "}
             <span
-              className={`${aladin.className} text-[48px] font-normal leading-[50px] text-[#ED7911]`}
+              className={`${aladin.className} text-[42px] font-normal leading-[42px] text-[#ED7911] sm:text-[48px] sm:leading-[50px]`}
             >
               Priority
             </span>

@@ -54,7 +54,7 @@ const HomeLogisticsServices = () => {
             />
           </div>
 
-          <div className="flex flex-col gap-8 px-8 py-8 text-white sm:px-12 lg:flex-row lg:items-center lg:justify-between lg:px-[105px]">
+          <div className="flex flex-col gap-8 px-6 py-8 text-white sm:px-12 lg:flex-row lg:items-center lg:justify-between lg:px-16 xl:px-[105px]">
             <div className="max-w-[350px]">
               <p className="text-[11px] font-medium uppercase leading-none text-white/70">
                 LOGISTICS SERVICES

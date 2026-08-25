@@ -54,23 +54,23 @@ const HomeTestimonials = () => {
         </div>
 
         <div className="relative mt-[38px] overflow-hidden">
-          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-white to-transparent" />
-          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-white to-transparent" />
+          <div className="pointer-events-none absolute inset-y-0 left-0 z-10 w-8 bg-gradient-to-r from-white to-transparent sm:w-16" />
+          <div className="pointer-events-none absolute inset-y-0 right-0 z-10 w-8 bg-gradient-to-l from-white to-transparent sm:w-16" />
 
-          <div className="testimonial-marquee flex w-max gap-[31px] py-1">
+          <div className="testimonial-marquee flex w-max gap-4 py-1 sm:gap-[31px]">
             {carouselTestimonials.map((testimonial, index) => (
               <article
                 key={`${testimonial.name}-${index}`}
-                className="h-[174px] w-[418px] shrink-0 rounded-[10px] border border-[#0363F14D] bg-white p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_24px_0_#0363F126]"
+                className="min-h-[174px] w-[calc(100vw-48px)] max-w-[418px] shrink-0 rounded-[10px] border border-[#0363F14D] bg-white p-5 transition-all duration-300 ease-out hover:-translate-y-1 hover:shadow-[0_10px_24px_0_#0363F126]"
               >
-              <div className="flex items-start justify-between gap-5">
+              <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between sm:gap-5">
                 <div className="flex items-center gap-[15px]">
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     width={70}
                     height={70}
-                    className="h-[70px] w-[70px] rounded-[86px] object-cover"
+                    className="h-[60px] w-[60px] rounded-[86px] object-cover sm:h-[70px] sm:w-[70px]"
                   />
 
                   <div className="pt-[2px]">
@@ -84,14 +84,14 @@ const HomeTestimonials = () => {
                   </div>
                 </div>
 
-                <div className="flex shrink-0 gap-[5px] pt-[28px]">
+                <div className="flex shrink-0 gap-[5px] sm:pt-[28px]">
                   {Array.from({ length: 5 }).map((_, starIndex) => (
                     <StarIcon key={starIndex} />
                   ))}
                 </div>
               </div>
 
-              <p className="ml-[84px] mt-[14px] max-w-[286px] font-['Poppins'] text-[16px] font-normal leading-[120%] text-black">
+              <p className="mt-[14px] max-w-[286px] font-['Poppins'] text-[15px] font-normal leading-[120%] text-black sm:ml-[84px] sm:text-[16px]">
                 {testimonial.text}
               </p>
               </article>

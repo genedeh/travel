@@ -15,7 +15,7 @@ const SendPackageIcon = () => (
 
 const Hero = () => {
   return (
-    <section className="relative h-[448px] w-full overflow-hidden">
+    <section className="relative min-h-[448px] w-full overflow-hidden">
       <Image
         src="/logistic (6).png"
         alt="WOW logistics van delivery"

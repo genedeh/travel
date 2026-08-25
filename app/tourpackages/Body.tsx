@@ -129,7 +129,7 @@ const Body = () => {
   return (
     <section className="w-full bg-white px-4 py-[42px] text-black sm:px-[22px]">
       <div className="mx-auto max-w-[1400px]">
-        <div className="flex items-start justify-between gap-6">
+        <div className="flex flex-col items-start justify-between gap-6 sm:flex-row">
           <div>
             <h2 className="font-inter text-[22px] font-semibold leading-[25px] text-black">
               Popular <span className="text-[#0363F1]">Tour Packages</span>
@@ -215,7 +215,7 @@ const Body = () => {
           ))}
         </div>
 
-        <div className="mt-[44px] flex min-h-[148px] flex-col gap-8 rounded-[20px] bg-[#E0EEFF] px-[40px] py-[32px] lg:flex-row lg:items-center lg:justify-between">
+        <div className="mt-[44px] flex min-h-[148px] flex-col gap-8 rounded-[20px] bg-[#E0EEFF] px-5 py-[28px] sm:px-[40px] lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-[250px]">
             <h2 className="font-inter text-[22px] font-semibold leading-[25px] text-black">
               Why Travel
@@ -227,7 +227,7 @@ const Body = () => {
             </p>
           </div>
 
-          <div className="grid flex-1 grid-cols-1 gap-7 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="grid flex-1 grid-cols-1 gap-7 sm:grid-cols-2 xl:grid-cols-4">
             {benefits.map((benefit) => (
               <div key={benefit.title} className="group flex flex-col items-center text-center">
                 <div className={`flex h-[50px] w-[50px] items-center justify-center rounded-full transition-transform duration-300 group-hover:-translate-y-1 group-hover:scale-105 ${benefit.color}`}>
@@ -254,8 +254,8 @@ const Body = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-r from-[#061947] via-[#0363F1]/70 to-[#0363F1]/15" />
 
-          <div className="relative z-10 flex min-h-[150px] flex-col items-start justify-center gap-5 px-[40px] py-[28px] md:flex-row md:items-center md:justify-between">
-            <div className="flex items-center gap-[24px]">
+          <div className="relative z-10 flex min-h-[150px] flex-col items-start justify-center gap-5 px-5 py-[28px] sm:px-[40px] md:flex-row md:items-center md:justify-between">
+            <div className="flex flex-col gap-[18px] sm:flex-row sm:items-center sm:gap-[24px]">
               <div className="flex h-[65px] w-[65px] shrink-0 items-center justify-center rounded-full border border-white bg-[#0363F1] p-[15px]">
                 <ReadyIcon />
               </div>

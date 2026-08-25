@@ -143,7 +143,7 @@ const HomeFAQ = () => {
                   <button
                     type="button"
                     onClick={() => setOpen(isOpen ? -1 : index)}
-                    className="flex w-full items-center gap-[34px] px-[31px] py-[21px] text-left"
+                    className="flex w-full items-center gap-4 px-5 py-[21px] text-left sm:gap-[34px] sm:px-[31px]"
                     aria-expanded={isOpen}
                   >
                     <span
@@ -154,7 +154,7 @@ const HomeFAQ = () => {
                       {isOpen ? <MinusIcon /> : <PlusIcon />}
                     </span>
 
-                    <span className="font-inter text-[18px] font-semibold leading-[130%] tracking-[0px] text-[#1B1139]">
+                    <span className="font-inter text-[16px] font-semibold leading-[130%] tracking-[0px] text-[#1B1139] sm:text-[18px]">
                       {faq.question}
                     </span>
                   </button>
@@ -167,7 +167,7 @@ const HomeFAQ = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      <p className="pb-[23px] pl-[112px] pr-[34px] font-inter text-[14px] font-normal leading-[151%] tracking-[0.1px] text-[#363049]">
+                      <p className="pb-[23px] pl-[68px] pr-5 font-inter text-[14px] font-normal leading-[151%] tracking-[0.1px] text-[#363049] sm:pl-[112px] sm:pr-[34px]">
                         {faq.answer}
                       </p>
                     </div>

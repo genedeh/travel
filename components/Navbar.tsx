@@ -17,6 +17,7 @@ const navLinks = [
 const Navbar = () => {
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const isHomePage = pathname === "/";
   const isTransparent = isHomePage && !scrolled;
 
@@ -35,14 +36,14 @@ const Navbar = () => {
           : "border-b border-slate-100 bg-white text-slate-700 shadow-xs"
       }`}
     >
-      <div className="mx-auto flex h-22 w-full max-w-7xl items-center justify-between px-6 lg:px-10">
+      <div className="mx-auto flex h-20 w-full max-w-7xl items-center justify-between px-4 sm:h-22 sm:px-6 lg:px-10">
         <div>
           <Image
             src="/logo.png"
             alt="Logo"
             width={128}
             height={128}
-            className="size-32 object-contain"
+            className="h-20 w-24 object-contain sm:size-32"
             priority
           />
         </div>
@@ -91,6 +92,68 @@ const Navbar = () => {
             />
           </svg>
         </Link>
+
+        <button
+          type="button"
+          aria-label="Toggle navigation menu"
+          aria-expanded={mobileMenuOpen}
+          onClick={() => setMobileMenuOpen((isOpen) => !isOpen)}
+          className={`flex size-10 items-center justify-center rounded-lg border transition md:hidden ${
+            isTransparent
+              ? "border-white/40 text-white"
+              : "border-slate-200 text-slate-700"
+          }`}
+        >
+          <span className="relative block h-4 w-5">
+            <span
+              className={`absolute left-0 top-0 h-0.5 w-5 rounded-full bg-current transition ${
+                mobileMenuOpen ? "translate-y-[7px] rotate-45" : ""
+              }`}
+            />
+            <span
+              className={`absolute left-0 top-[7px] h-0.5 w-5 rounded-full bg-current transition ${
+                mobileMenuOpen ? "opacity-0" : ""
+              }`}
+            />
+            <span
+              className={`absolute bottom-0 left-0 h-0.5 w-5 rounded-full bg-current transition ${
+                mobileMenuOpen ? "-translate-y-[7px] -rotate-45" : ""
+              }`}
+            />
+          </span>
+        </button>
+      </div>
+
+      <div
+        className={`grid overflow-hidden bg-white text-slate-700 shadow-[0_12px_24px_rgba(15,23,42,0.08)] transition-all duration-300 md:hidden ${
+          mobileMenuOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]"
+        }`}
+      >
+        <div className="min-h-0">
+          <div className="flex flex-col gap-4 px-6 pb-6 pt-2 font-semibold">
+            {navLinks.map(({ href, label }) => {
+              const isActive = href === "/" ? pathname === href : pathname.startsWith(href);
+
+              return (
+                <Link
+                  key={href}
+                  href={href}
+                  aria-current={isActive ? "page" : undefined}
+                  onClick={() => setMobileMenuOpen(false)}
+                  className={`rounded-md py-1 transition hover:text-[#ED7911] ${
+                    isActive ? "text-[#ED7911]" : "text-slate-600"
+                  }`}
+                >
+                  {label}
+                </Link>
+              );
+            })}
+
+            <Link href="/contact" onClick={() => setMobileMenuOpen(false)} className="mt-1 inline-flex w-fit items-center gap-2 rounded-xl bg-[#ED7911] px-5 py-3 font-semibold text-white transition duration-300 hover:bg-orange-600">
+              Book Now
+            </Link>
+          </div>
+        </div>
       </div>
     </nav>
   );

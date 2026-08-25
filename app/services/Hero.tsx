@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Hero = () => {
   return (
-    <div className="relative h-120 w-full overflow-hidden">
+    <div className="relative min-h-[420px] w-full overflow-hidden sm:min-h-[480px]">
       <Image
         src="/image 19.png"
         alt="WOW The World services"
